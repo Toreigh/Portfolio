@@ -51,6 +51,8 @@ h4 {
 
 p {
     font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }
 
 
@@ -248,10 +250,11 @@ nav .links {
 
 
  /* JUMBOTRON */
- .jumbotron {
-    background: url("../images/SAASredesignthumbnail.jpg") no-repeat 50% 25%;
+ .background-img {
+    background: url("../images/homescreen-4.png") no-repeat 50% 25%;
     background-size: cover;
     min-height: 30rem;  
+    
  }
 
 /* SECONDARY NAVIGATION */
@@ -278,12 +281,12 @@ nav .links {
  /* BACKGROUND INFO */
  .background-title {
      color: white;
-     padding: 0 0 1.25rem 0;
+     /* padding: 0 0 1.25rem 0; */
  }
 
  .background p{
      color: white;
-     font-size: 1rem;
+     
  }
 
 .sa-amb-thumbnail {

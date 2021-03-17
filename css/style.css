@@ -1,0 +1,810 @@
+@font-face{
+    font-family: 'Poppins', sans-serif;
+    
+
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
+@import url("./line.css");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-padding: 0 12vw;
+    --text: #1b1b1b;
+    --primary: #356161;
+    --p-light: #9DB6B5;
+    --accent:#F28482;
+    --tertiary: #F6BD60;
+}
+
+@media only screen and (max-width: 560px) {
+    :root {
+       --main-padding: 0 1.5rem;
+   }
+}
+
+
+h1 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .12rem;
+    line-height: 2rem;
+}
+
+.light {
+    font-weight: lighter;
+}
+
+/* Colour changes- (for changing colours mid-sentence) */
+.clr-primary {
+    color: var(--primary);
+    
+}
+
+.clr-p-light {
+    color: var(--p-light);
+}
+
+.clr-accent {
+    color: var(--accent);
+}
+
+.clr-tertiary {
+    color: var(--tertiary);
+}
+
+/* Background Colour variations */
+
+.fill-primary {
+    background-color: var(--primary);
+}
+
+.fill-p-light {
+    background-color: var(--p-light);
+}
+
+.fill-accent {
+    background-color: var(--accent);
+}
+
+.fill-tertiary {
+    background-color: var(--tertiary);
+}
+
+/* Pill-shape tag */
+
+.tag {
+    border-radius: 24px;
+    padding: 0 .72rem;
+}
+
+/* BUTTON SYSTEM */
+
+button {
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+    transition: 120ms;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+/* Button modifiers */
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--p-light);
+}
+
+.btn-lg {
+    height: 72px;
+    padding: 0 1.5rem;
+}
+
+.btn-ln {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-ln:hover {
+    background-color: var(--p-light);
+    color: white;
+    border-color: var(--p-light);
+}
+
+/* SHADOW ELEVATION */
+
+:root {
+    --ev-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    --ev-2: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    --ev-3: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* NAVIGATION */
+
+nav {
+    
+    min-height: 72px;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    padding: var(--main-padding);
+    border-bottom: 2px solid var(--accent);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+nav h3 {
+    font-size: 2vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav>* {
+    display: flex;
+
+}
+
+nav .brand {
+    flex-grow: 3;
+}
+
+nav .links {
+    flex-grow: 1;
+    justify-content: center;
+    list-style: none;
+}
+
+.link {
+    flex-grow: 1;
+    margin: 0 .8rem;
+}
+
+.link:hover>li>a {
+    color: var(--accent);
+}
+
+.brand-small{
+    display: none;
+}
+
+#burger-menu {
+    display: none;
+}
+
+
+/* MAIN */
+
+main {
+    padding: var(--main-padding);
+}
+
+/* GRID */
+.hero-grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    padding: 12rem 0;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    padding: 5rem 0;
+    
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: auto;
+    padding: 5rem 0;
+}
+
+/* BACK TO TOP */
+.back-to-top {
+    display: none;
+    position: fixed;
+    font-size: 3rem;
+    color: var(--p-light);
+    background-color: transparent;
+    bottom: 100px;
+    right: 50px;
+
+}
+
+
+/* HEADING SPACING */ 
+.header-title {
+    grid-area: 1 / 1 / span 1 / span 12;
+    /* padding: 0% 0% 2% 0; */
+    
+}
+
+.header-subtitle {
+    grid-area: 2 / 1 / span 1 / span 7;
+    /* padding: 0% 0% 5% 0%; */
+} *
+
+.header-body-text {
+    grid-area: 3 / 1 / span 1 / span 6; 
+    /* padding: 0% 0% 10% 0%; */
+}
+
+/* HERO SECTION */
+
+.hero-grid p {
+    padding: 1.2rem 0;
+    font-size: 1.24rem;
+    font-weight: 285;
+    /* width: 50%; */
+}
+
+
+.container-contact {
+    grid-area: 4 / 1 / span 1 / span 3;
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.container-contact>* {
+    margin-right: 1.2rem;
+}
+
+.icon {
+    color: black;
+    font-size: 2rem;
+    
+}
+
+/* CASE STUDIES */
+
+
+.selected-work {
+    padding: 5% 0;
+}
+
+/* CASE STUDY 1 - SA AMBULANCE */
+.case-study-SAAS {
+    padding: 1.5rem;
+    min-height: 560px;
+    border-radius: 12px;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+
+}
+
+.case-study-SAAS:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.thumbnail-SAAS {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/SAASredesignthumbnail.jpg") no-repeat 50% 25%;
+    background-size: cover;
+}
+
+.snippet-right {
+    grid-column: span 6;
+    padding-left: 3rem;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.content>* {
+    margin-bottom: 1rem;
+}
+
+.snippet-right button {
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 3rem);
+}
+
+/* CASE STUDY 2 */
+
+.case-study-seedshare {
+    padding: 1.5rem;
+    min-height: 560px;
+    border-radius: 12px;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+}
+
+.case-study-seedshare:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.snippet-left {
+    grid-column: span 6;
+    padding-right: 3rem;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+}
+
+.content>* {
+    margin-bottom: 1rem;
+}
+
+.snippet-left button {
+    justify-self: flex-end;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 3rem);
+}
+
+.thumbnail-seedshare {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/SeedShareOnboarding.png") no-repeat 50% 25%;
+    background-size: cover;
+    margin: 0 0 5% 0;
+}
+
+/* CASE STUDY 2 END */
+
+/* CASE STUDY 3- STORY DOGS */
+.case-study-storydogs {
+    padding: 1.5rem;
+    min-height: 560px;
+    border-radius: 12px;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+}
+
+.case-study-storydogs:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+.thumbnail-storydogs {
+    grid-column: span 6;
+    border-radius: .8rem;
+    background: url("../images/StoryDogs.png") no-repeat 50% 25%;
+    background-size: cover;
+}
+
+/* CONTACT ME SECTION */
+
+.contact-me {
+    background-color:whitesmoke;
+}
+
+
+.contact-me p {
+    grid-area: 2 / 1 / span 3 / span 8;
+    padding: 5% 0 5% 0;
+    font-size: 2rem;
+    font-weight: 285;
+
+}
+
+.contact-me button {
+    grid-area: 5 / 1 / span 2 / span 2;
+   
+ } 
+   
+
+
+/* FOOTER */
+
+.footer{
+    color: white;
+}
+
+.footer h4 {
+    grid-area: 1 / 1 / span 1 / span 6; 
+
+}
+
+.footer p {
+    padding: 10% 0;
+}
+
+.footer .socials {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+.footer-icons {
+    color: white;
+    font-size: 1.5rem;
+    
+}
+
+
+.footer-linkedin { 
+    color: white;
+    padding: 0 10% 0 0;
+    transition: 300ms;
+    
+}
+
+.footer-linkedin:hover {
+    color: var(--accent)
+}
+
+.footer-behance {
+    padding: 0 10% 0 0;
+    transition: 300ms;
+}
+
+.footer-behance:hover {
+    color: var(--accent)
+}
+
+.footer-instagram {
+    padding: 0 10% 0 0;
+    transition: 300ms;
+}
+
+.footer-instagram:hover {
+    color: var(--accent)
+}
+
+.footer-links{
+    grid-area: 1 / 9 / span 4 / span 5;
+    
+}
+
+.footer .copyright {
+    grid-area: 5 / 1 / span 1 / span 2;
+    
+}
+
+.footer ul {
+    list-style: none;
+    line-height: 2.25rem;
+    
+} *
+
+.footer ul li a {
+    text-decoration: none;
+    color: white;
+    
+} 
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:768px) and (max-width: 1224px) {
+
+    .links {
+        display: none;
+    }
+
+    .brand {
+        display: none;
+    }
+  
+    .brand-small{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        
+    }
+
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-around; 
+       
+    }
+    
+    .hero-grid {
+        grid-template-columns: repeat(8,1fr);
+        padding: 12rem 0;
+    }
+    
+    .main-grid {
+        grid-template-columns: repeat(8,1fr);
+        padding: 1rem 0;
+        
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(8,1fr);
+        padding: 4rem 0;
+    }
+
+    /* CASE STUDIES */
+    /* CASE STUDY 1 -SAAS*/
+    .case-study-SAAS {
+        padding: 1.5rem;
+        min-height: 560px;
+       
+    }
+    
+    .thumbnail-SAAS {
+        grid-column: span 8;
+        min-height: 35rem;
+        
+    }
+    
+    .snippet-right {
+        grid-column: span 8;
+        padding: 2rem;
+    }
+
+    .content>* {
+        margin-bottom: 2rem ;
+    }
+    
+
+    /* CASE STUDY 2- SEEDSHARE */
+    
+    .case-study-seedshare {
+        padding: 1.5rem;
+        min-height: 560px;  
+    }
+     
+    .thumbnail-seedshare {
+        grid-column: span 8;
+        grid-row-start: 1;
+        min-height: 35rem;
+      
+    }
+
+    .snippet-left {
+        grid-column: span 8;
+        padding: 2rem;
+    }
+    
+    .content>* {
+        margin-bottom: 2rem;
+    }
+    
+    /* CASE STUDY 3 - STORY DOGS */
+    .case-study-storydogs {
+        padding: 1.5rem;
+        min-height: 560px;
+       
+    }
+
+    .thumbnail-storydogs {
+        grid-column: span 8;
+        min-height: 35rem;
+    }
+
+    /* FOOTER */
+    .footer h4 {
+        grid-area: 1 / 1 / span 2 / span 3; 
+    
+    }
+
+    .footer .socials {
+        grid-area: 3 / 1 / span 2 / span 3;
+    }
+
+    .footer .links{
+        grid-area: 1 / 7 / span 1 / span 5;
+    }
+
+  
+    .footer .copyright {
+    grid-area: 5 / 1 / span 1 / span 2;
+    padding: 10% 0 0 0;
+    }
+}
+
+@media only screen and (max-width: 767px) and (min-device-width:320px) {
+    h1 {
+        font-size: 2.3rem;
+        line-height: 2.8rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+        line-height: 4rem;
+    }
+    
+    h3 {
+        font-size: 1.45rem;
+        line-height: 1.9rem;
+    }
+    
+    h4 {
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: .12rem;
+        line-height: 1.74rem;
+    }
+    
+    .links {
+        display: none;
+    }
+
+    .brand {
+        display: none;
+    }
+  
+    .brand-small{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #burger-menu {
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+    }
+    
+    .hero-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 6rem 0 3rem 0;
+    }
+    
+    .main-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 0rem 0;
+        
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(4,1fr);
+        padding: 4rem 0;
+    }
+
+    /* HERO SECTION */
+    .header-subtitle {
+        padding: 5% 0% 0% 0%;
+    } *
+    
+    .hero-grid p {
+        font-size: 1rem;
+    }
+
+    .container-contact {
+        grid-area: 4 / 1 / span 1 / span 4;
+       
+    }
+
+    /* CASE STUDIES */
+    /* CASE STUDY 1 -SAAS*/
+    .case-study-SAAS {
+        padding: .5rem;
+        min-height: 560px;
+       
+    }
+    
+    .thumbnail-SAAS {
+        grid-column: span 4;
+        min-height: 16.25rem;
+        
+    }
+    
+    .snippet-right {
+        grid-column: span 4;
+        padding: 1rem .5rem;
+    }
+
+    .content>* {
+        margin-bottom: 3rem ;
+    }
+
+
+
+    /* CASE STUDY 2- SEEDSHARE */
+    
+    .case-study-seedshare {
+        padding: .5rem;
+        min-height: 560px;  
+    }
+     
+    .thumbnail-seedshare {
+        grid-column: span 4;
+        grid-row-start: 1;
+        min-height: 16.25rem;
+      
+    }
+
+    .snippet-left {
+        grid-column: span 4;
+        padding: 1rem .5rem;
+    }
+    
+    .content>* {
+        margin-bottom: 2rem;
+    }
+    
+    /* CASE STUDY 3 - STORY DOGS */
+    .case-study-storydogs {
+        padding: .5rem;
+        min-height: 560px;  
+    }
+
+    .thumbnail-storydogs {
+        grid-column: span 4;
+        min-height: 16.25rem;
+    }
+
+    /* CONTACT Me */
+    .contact-me {
+        padding: 7% 0;
+    }
+    
+    .contact-me p {
+        grid-area: 2 / 1 / span 3 / span 4;
+        padding: 5% 0 7% 0;
+        font-size: 1.25rem;
+        font-weight: 285;
+    
+    }
+    
+    .contact-me button {
+        grid-area: 5 / 1 / span 2 / span 3;
+       
+     } 
+
+
+    /* FOOTER */
+    .footer h4 {
+        grid-area: 1 / 1 / span 2 / span 3; 
+    
+    }
+
+    .footer .socials {
+        grid-area: 3 / 1 / span 2 / span 4;
+    }
+
+    .footer .links{
+        grid-area: 6 / 1 / span 4 / span 4;
+    }
+
+  
+    .footer .copyright {
+    grid-area: 10 / 1 / span 1 / span 2;
+    padding: 10% 0 0 0;
+    }
+}
+
+
+
+

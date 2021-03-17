@@ -1,0 +1,49 @@
+:root {
+    --neutral: #bdbdbd;
+    --thickness: 1px;
+    --border: var(--thickness) solid var(--neutral);
+}
+
+hr {
+    border-top: var(--border);
+    border-width: var(--thickness) 0 0;
+    color: var(--neutral);
+    height: 0;
+    overflow: visible;
+}
+
+.ln {
+    border: var(--border);
+}
+
+.nl-top {
+    border-top: none;
+}
+
+.nl-bottom {
+    border-bottom: none;
+}
+
+.nl-left {
+    border-left: none;
+}
+
+.nl-right {
+    border-right: none;
+}
+
+.ln-top {
+    border-top: var(--border);
+}
+
+.ln-bottom {
+    border-bottom: var(--border);
+}
+
+.ln-left {
+    border-left: var(--border);
+}
+
+.ln-right {
+    border-right: var(--border);
+}

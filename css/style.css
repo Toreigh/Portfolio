@@ -119,10 +119,12 @@ button:hover {
 .btn-primary {
     background-color: var(--primary);
     color: white;
+    
 }
 
 .btn-primary:hover {
     background-color: var(--p-light);
+    
 }
 
 .btn-lg {
@@ -258,7 +260,7 @@ main {
 }
 
 .header-subtitle {
-    grid-area: 2 / 1 / span 1 / span 7;
+    grid-area: 2 / 1 / span 1 / span 6;
     /* padding: 0% 0% 5% 0%; */
 } *
 

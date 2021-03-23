@@ -268,7 +268,7 @@ main {
 }
 
 .header-body-text2 {
-    grid-area: 4 / 1 / span 1 / span 6; 
+    grid-area: 4 / 1 / span 1 / span 5; 
     /* padding: 0% 0% 10% 0%; */
 }
 
@@ -489,6 +489,8 @@ main {
 
 
 /* MEDIA QUERIES */
+@media only screen and (min-width:1225px) and (max-width: 1400px) {
+
 
 @media only screen and (min-width:768px) and (max-width: 1224px) {
 

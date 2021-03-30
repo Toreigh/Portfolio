@@ -1,0 +1,272 @@
+@font-face{
+    font-family: 'Poppins', sans-serif;
+    
+
+    src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+}
+
+@import url("./line.css");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-padding: 0 12vw;
+    --text: #1b1b1b;
+    --primary: #356161;
+    --p-light: #9DB6B5;
+    --accent:#F28482;
+    --tertiary: #F6BD60;
+    --grey: #F5F5F5;
+}
+
+
+
+
+h1 {
+    font-size: 4rem;
+    line-height: 5.6rem;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+h3 {
+    font-size: 2rem;
+    line-height: 2.4rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .12rem;
+    line-height: 2rem;
+}
+
+p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+}
+
+
+.light {
+    font-weight: lighter;
+}
+
+.clr-primary {
+    color: var(--primary);
+    
+}
+
+.clr-p-light {
+    color: var(--p-light);
+}
+
+.clr-accent {
+    color: var(--accent);
+}
+
+.clr-tertiary {
+    color: var(--tertiary);
+}
+
+.clr-white {
+    color: white;
+}
+
+/* Background Colour variations */
+
+.fill-primary {
+    background-color: var(--primary);
+}
+
+.fill-p-light {
+    background-color: var(--p-light);
+}
+
+.fill-accent {
+    background-color: var(--accent);
+}
+
+.fill-tertiary {
+    background-color: var(--tertiary);
+}
+
+.fill-grey {
+    background-color: var(--grey);
+}
+/* Pill-shape tag */
+
+.tag {
+    border-radius: 24px;
+    padding: 0 .72rem;
+}
+
+/* BUTTON SYSTEM */
+
+button {
+    height: 48px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    padding: 0 1rem;
+    transition: 120ms;
+}
+
+button:hover {
+    transform: scale(1.06);
+}
+
+/* Button modifiers */
+
+.btn-primary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--p-light);
+}
+
+.btn-lg {
+    height: 72px;
+    padding: 0 1.5rem;
+}
+
+.btn-ln {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.btn-ln:hover {
+    background-color: var(--p-light);
+    color: white;
+    border-color: var(--p-light);
+}
+
+/* SHADOW ELEVATION */
+
+:root {
+    --ev-1: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+    --ev-2: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+    --ev-3: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* NAVIGATION */
+
+nav {
+    
+    min-height: 72px;
+    height: 4vw;
+    display: flex;
+    align-items: center;
+    padding: var(--main-padding);
+    border-bottom: 2px solid var(--accent);
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.navbar-brandsmall {
+    display:none;
+}
+
+nav h3 {
+    font-size: 2vw;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+nav>* {
+    display: flex;
+
+}
+
+nav .brand {
+    flex-grow: 3;
+}
+
+nav .links {
+    flex-grow: 1;
+    justify-content: center;
+    list-style: none;
+}
+
+.link {
+    flex-grow: 1;
+    margin: 0 .8rem;
+}
+
+.link:hover{
+    color: var(--accent);
+}
+
+
+/* HOVER BOX */
+
+.hover-box {
+    padding: 1.5rem;
+    /* min-height: 410px; */
+    border-radius: 12px;
+    box-shadow: var(--ev-1);
+    transition: 300ms;
+    margin: 0 0 5% 0;
+}
+
+.hover-box:hover {
+    box-shadow: var(--ev-3);
+    transform: scale(1.006);
+}
+
+
+.coverimage {
+
+}
+
+/* CHARITYBINS COLOURS */
+
+.bins-fill-primary {
+    background-color: #0F6B61;
+}
+
+.bins-fill-primary-opacity {
+    background-color: rgba(15,107,97,0.4);
+}
+
+.bins-fill-p-light {
+    background-color: #39B08A;
+}
+
+.bins-fill-accent {
+    background-color: #F69782;
+}
+
+.bins-fill-accent-opacity {
+    background-color: rgba(246,151,130,.20);
+}
+
+.bins-fill-tertiary {
+    background-color: #FFD473;
+}
+
+.bins-fill-tertiary-opacity  {
+    background-color:rgba(255,212,115,.30);
+}
+
+.background-circle {
+    background: url("./images/circle_p1.png") no-repeat 50% 25%;
+    background-size: contain;
+    min-height: 30rem;  
+}
